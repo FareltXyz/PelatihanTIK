@@ -1,66 +1,79 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Memastikan ukuran elemen tidak melebar saat diberi padding */
 }
 
+/* Mengatur tampilan latar belakang halaman dan menempatkan kartu tepat di tengah layar */
 body {
-    min-height: 100vh;
+    min-height: 100vh; /* Tinggi halaman minimal 1 layar penuh */
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Rata tengah secara horizontal (kiri-kanan) */
+    align-items: center; /* Rata tengah secara vertikal (atas-bawah) */
     background-color: aliceblue;
+    padding: 16px; /* Jarak aman agar kartu tidak menempel ke tepi layar HP */
 }
+
+/* Mengatur tampilan foto profil */
 img {
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
-    border-radius: 100%;
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran penuh */
+    object-fit: cover; /* Menjaga proporsi foto agar tidak gepeng */
 }
+
+/* Mengatur kotak/wadah kartu profil */
 .kartu-profil {
     padding: 50px 25px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Menyusun isi kartu dari atas ke bawah */
+    align-items: center; /* Meratakan isi kartu di tengah */
+    text-align: center; /* Meratakan teks di tengah jika turun ke baris baru */
     background-color: whitesmoke;
-    border-radius: 25px;
+    border-radius: 25px; /* Membuat sudut kartu membulat */
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+/* Mengatur tampilan tombol tautan GitHub */
 .cta {
     background-color: black;
     color: white;
-    padding: 8px 6px;
-    text-decoration: none;
+    padding: 8px 12px;
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
     margin-top: 15px;
     border-radius: 10px;
     display: inline-flex;
+    align-items: center; /* PERBAIKAN: Meratakan ikon GitHub dan teks agar sejajar di tengah */
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    gap: 7px;
+    gap: 7px; /* Jarak antara ikon dan teks */
+    /* PERBAIKAN: Memindahkan transisi ke elemen utama agar animasi halus saat kursor masuk maupun keluar */
+    transition: transform 500ms ease-in-out;
 }
 
+/* Efek saat kursor diarahkan (hover) ke tombol GitHub */
 .cta:hover {
-    transition: all;
-    transition-duration: 500ms;
-    transition-timing-function: ease-in-out;
-    transform: translateX(-7px);
+    transform: translateX(-7px); /* Menggeser tombol sedikit ke kiri */
 }
 
+/* Mengatur tampilan tombol "Sapa Tombol" */
 #sapaButton {
     background-color: aqua;
+    /* PERBAIKAN PENTING: Mengubah warna teks dari 'azure' (putih pucat) ke hitam agar tulisan terbaca jelas di atas warna 'aqua' */
+    color: #003333;
     margin-top: 15px;
-    padding: 10px;
+    padding: 10px 16px;
     border: none;
     font-weight: bold;
     border-radius: 5px;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    color: azure;
+    cursor: pointer; /* Mengubah kursor menjadi ikon tangan saat diarahkan ke tombol */
+    /* PERBAIKAN: Memindahkan transisi ke elemen utama agar gerakan kembali ke posisi awal tetap mulus */
+    transition: transform 500ms ease;
 }
 
+/* Efek saat kursor diarahkan (hover) ke tombol "Sapa Tombol" */
 #sapaButton:hover {
-    cursor: pointer;
-    transition: all;
-    transition-duration: 500ms;
-    transition-timing-function: ease;
-    transform: translateX(-7px);
+    transform: translateX(-7px); /* Menggeser tombol sedikit ke kiri */
 }
