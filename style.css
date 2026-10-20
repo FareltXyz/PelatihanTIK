@@ -35,7 +35,15 @@ img {
     margin-top: 15px;
     border-radius: 10px;
     display: inline-flex;
-    gap: 20px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    gap: 7px;
+}
+
+.cta:hover {
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transform: translateX(-7px);
 }
 
 #sapaButton {
@@ -43,6 +51,16 @@ img {
     margin-top: 15px;
     padding: 10px;
     border: none;
+    font-weight: bold;
     border-radius: 5px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     color: azure;
+}
+
+#sapaButton:hover {
+    cursor: pointer;
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transform: translateX(-7px);
 }
