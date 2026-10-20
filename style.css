@@ -9,4 +9,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: aliceblue;
+}
+img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+}
+.kartu-profil {
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.cta {
+    background-color: black;
+    color: white;
+    padding: 8px 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 10px;
+    display: inline-flex;
+    gap: 20px;
+}
+
+#sapaButton {
+    background-color: aqua;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: azure;
 }
